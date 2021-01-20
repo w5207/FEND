@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+html {
+  font-size: 16px;
+}
+
+body {
+  color: #343a40;
+  line-height: 1.7em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 2em;
+  margin: 1em 0 16px;
+  padding: 0;
+}
+@media screen and (max-width: 1200px) {
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.6em;
+  }
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+h1 a {
+  color: inherit;
+}
+
+p {
+  color: #343a40;
+  margin: 1em 0;
+}
+
+a {
+  color: #099268;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+a:hover, a:active {
+  color: #12b886;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 1em;
+  border-radius: 5px;
+}
