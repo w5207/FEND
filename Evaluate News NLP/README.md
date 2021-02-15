@@ -16,10 +16,14 @@ Once you create an account with MeaningCloud, you will be given a license key to
 # Steps to set the API
 1. Create a new .env file in the root of your project.
 2. Fill the .env file with your API keys like this:
+
     API_KEY=**************************
+
 3. Add this code to the very top of your server/index.js file:
+
     const dotenv = require('dotenv');`
     dotenv.config();`
+
 4. 
 
 ## Instructions
