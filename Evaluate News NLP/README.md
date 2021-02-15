@@ -10,10 +10,10 @@ The goal of this project is to give you practice with:
 - Service workers
 - Using APIs and creating requests to external urls
 
-## API
+# API
 You can find the API [here](https://www.meaningcloud.com/developer/sentiment-analysis). 
 Once you create an account with MeaningCloud, you will be given a license key to start using the API.
-# Set up the API
+## Set up the API
 1. Use npm to install the dotenv package
 ```
 npm install dotenv
@@ -24,20 +24,21 @@ npm install dotenv
 API_KEY=**************************
 ```
 
-## Instructions
+# Instructions
 
 Fork this repo and begin your project setup.
 
 Once you clone, you need to install everything:
 `cd` into your new folder and run:
-- `npm install`
-
-# run in development mode
+```
+npm install
+```
+## Run in development mode
 To start the webpack dev server at port 8080
 ```
 npm run build-dev
 ```
-# run in production mode
+## Run in production mode
 Generate the dist files and then start server at port 3000
 ```
 npm run build-prod
