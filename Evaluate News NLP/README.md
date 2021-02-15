@@ -33,12 +33,12 @@ Once you clone, you need to install everything:
 ```
 npm install
 ```
-## run in development mode
+## Run in development mode
 To start the webpack dev server at port 8080
 ```
 npm run build-dev
 ```
-## run in production mode
+## Run in production mode
 Generate the dist files and then start server at port 3000
 ```
 npm run build-prod
