@@ -4,24 +4,18 @@
 <head>
   <meta charset="utf-8">
   <title>Test</title>
-  <link href="/favicon.ico" type="image/x-icon" rel="icon" />
 </head>
 
 <body>
 
   <header>
-    <div class="">
-      Logo
-    </div>
-    <div class="">
-      navigation
-    </div>
+      Sentiment Analysis
   </header>
 
   <main>
     <section>
       <form class="" onsubmit="return Client.handleSubmit(event)">
-        <input id="name" type="text" name="input" value="" placeholder="Name">
+        <input id="name" type="text" name="input" value="" placeholder="Valid URL of news or blogs">
         <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
           onsubmit="return handleSubmit(event)">
       </form>
@@ -37,8 +31,19 @@
   </main>
 
   <footer>
-    <p>This is a footer</p>
+    <p>Cr. Udacity/5207www</p>
   </footer>
+
+  <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+        });
+    }
+   </script>
+
 </body>
 
 </html>

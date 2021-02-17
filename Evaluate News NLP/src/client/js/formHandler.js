@@ -8,8 +8,16 @@ function handleSubmit(event) {
   if (Client.checkForURL(formText)) {
     console.log("::: Form Submitted :::")
 
-    postData('http://localhost:3000/analyze', { url: formText })
-
+    fetch('http://localhost:3000/analyze', {
+      method: 'POST',
+      credentials: 'same-origin',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ url: formText })
+    }) 
+      .then(res => res.json())
       .then(function (res) {
         console.log("response from /analyze", res);
         document.getElementById('polarity').innerHTML = 'Polarity: ' + polarityChecker(res.score_tag);
@@ -17,28 +25,10 @@ function handleSubmit(event) {
         document.getElementById("subjectivity").innerHTML = `Subjectivity: ${res.subjectivity}`;
         document.getElementById("confidence").innerHTML = `Confidence: ${res.confidence}`;
       })
+  } else {
+    alert("The URL is invalid");
   }
 }
-
-const postData = async (url = "", data = {}) => {
-  console.log('Analyzing:', data);
-  const response = await fetch(url, {
-    method: 'POST',
-    credentials: 'same-origin',
-    mode: 'cors',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data)
-  });
-  try {
-    const newData = await response.json();
-    console.log('Data received:', newData)
-    return newData;
-  } catch (error) {
-    console.log('error', error);
-  }
-};
 
 // API response output (https://www.meaningcloud.com/developer/sentiment-analysis/doc/2.1/response)
 const polarityChecker = (score) => {

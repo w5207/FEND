@@ -6,7 +6,7 @@ const fetch = require('node-fetch')
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
-const mockAPIResponse = require('./mockAPI.js')
+const mockAPIResponse = require('./mockAPI')
 
 const app = express()
 
