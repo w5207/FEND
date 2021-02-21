@@ -44,11 +44,3 @@ Generate the dist files and then start server at port 3000
 npm run build-prod
 npm run start
 ```
-
-<<<<<<< HEAD
-
-
-=======
-## Overview
-This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI. 
->>>>>>> ffada10642040d06c4a258f53bdb31e1652215a6
