@@ -1,3 +1,3 @@
 # Front End Projects
 
-This folder includes some of the front-end projects I did. 
+This repository includes some of the front-end projects I did. 
