@@ -1,21 +1,24 @@
 {
-  "name": "example-project",
+  "name": "package",
   "version": "1.0.0",
+  "description": "## Overview This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI.",
   "main": "index.js",
   "scripts": {
     "test": "jest",
     "start": "node src/server/server.js",
-    "build-prod": "webpack --config webpack.prod.js",
-    "build-dev": "webpack serve --open --config webpack.dev.js"
+    "prod": "webpack --config webpack.prod.js",
+    "dev": "webpack serve --open --config webpack.dev.js"
   },
-  "keywords": [],
-  "author": "",
+  "author": "5207",
   "license": "ISC",
-  "description": "",
+  "keywords": [],
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "file-loader": "^6.2.0",
+    "html-loader": "^2.1.0",
     "node-fetch": "^2.6.1",
+    "regenerator-runtime": "^0.13.7",
     "webpack": "^5.21.2",
     "webpack-cli": "^4.5.0"
   },
@@ -38,5 +41,10 @@
     "terser-webpack-plugin": "^5.1.1",
     "webpack-dev-server": "^3.11.2",
     "workbox-webpack-plugin": "^6.1.0"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./src/setupTests.js"
+    ]
   }
 }

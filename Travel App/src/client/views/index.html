@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan Your Trip</title>
+  <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <div class="headline">Plan Your Trip</div>
+    <div>
+      <label for="destination">Going to</label>
+      <input type="text" id="destination" placeholder=" Enter the City Name Here">
+    </div>
+    <div>
+      <label for="departing">Departing on</label>
+      <input type="datetime-local" id="departing" rows="9" cols="50"></textarea>
+    </div>
+    <div>
+      <label for="returning">Returning on</label>
+      <input type="datetime-local" id="returning" rows="9" cols="50"></textarea>
+    </div>
+    <div>
+      <button id="generate" type="submit" onclick="return Client.performAction(event)"
+        onsubmit="return performAction(event)"> Generate </button>
+    </div>
+  </div>
+
+  <div id="result">
+    <div class="title">Your Trip</div>
+    <div>
+      <div>
+        <div id="city"></div>
+        <div id="departDate"></div>
+        <div id="diff"></div>
+        <div id="length"></div>
+        <div id="weather"></div>
+      </div>
+      <div>
+        <img src="" id="picture">
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
+  </script>
+</body>
+
+</html>
